@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDG_Task_1</title>
+</head>
+<style>
+    .navbar div {
+        display: inline-block;
+       
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+
+    }
+    .logo ul li{
+        display:inline-block;
+    }
+    .logo{
+        flex: 1;
+        text-align: left;
+    }
+    .color{
+        color:rgb(24, 24, 61);
+        font-size: 25px;
+    }
+    
+    .list ul li{
+        display:inline-block;
+        margin-left: 30px;
+        font-size: 25px;
+        text-align: center;
+        flex: 1;
+       
+    }
+    .list ul li a{
+       text-decoration: none;
+       color:rgba(0, 0, 0, 0.877);
+    }
+    .list ul li:hover{
+        color:rgb(24, 24, 61) ;
+    }
+    .last ul li{
+        display:inline-block;   
+
+    }
+   .last{
+    flex:1;
+    text-align: right;
+   }
+    .last .btn{
+        width:310px;
+        padding: 5px;
+        height: 40px;
+        color: rgb(24, 24, 61);
+        background-color:white;
+        font-size: 20px;
+        border-color: rgb(24, 24, 61);
+        border-radius: 10px;
+        margin-left: 20px;
+    }
+    .last .btn:hover{
+        background-color:rgb(24, 24, 61);
+        color: white;
+    }
+    .select{
+        font-size: 25px;
+    }
+    .select_input{
+        flex:1;
+        text-align: left;
+        margin-left: 40px;
+        width:350px;
+        height: 40px;
+        border-radius: 10px;
+        border-color: rgb(24, 24, 61);
+        padding: 10px;
+    }
+    .search_input{
+        flex:1;
+        text-align:center;
+        
+    }
+    .search_input input{
+        width:565px;
+        margin-right: 20px;
+        margin-left: 30px;
+        height: 40px;
+        border-radius: 10px;
+        border-color: rgb(24, 24, 61);
+        padding: 10px;
+    }
+    .search_btn{
+        flex:1;
+        text-align: right;
+        
+    }
+    .search_btn button{
+        width: 310px;
+        height: 40px;
+        font-size: 20px;
+        padding-right: 30px;
+        border-radius: 10px;
+        border-color: rgb(24, 24, 61);
+        background-color: rgb(24, 24, 61);
+        color: white;
+    }
+    .search_btn button:hover{
+        background-color: white;
+        color: rgb(24, 24, 61);
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .container div{
+        display: inline-block;
+        
+        
+    }
+    .carts{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .carts .cart{
+        display: inline-block;  
+         
+    }
+    .cart{
+        width:250px;
+        padding: 20px;
+        background-color: antiquewhite;
+        margin-top: 50px;
+        margin-left: 10px;
+       
+    }
+    .cart .price_before{
+        text-decoration: line-through;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.829);
+    }
+    .cart .price_after{
+        font-size: 20px;
+        color: red;
+        font-weight: bold;
+        margin-left: 10px;
+    } 
+    .cart_btn{
+        display: block;
+        width: 220px;
+        height: 40px;
+        background-color:rgb(24, 24, 61) ;
+        border-color: rgb(24, 24, 61);
+        color: white;
+        font-size: 15px;
+    }
+    .cart_btn:hover{
+       background-color: white;
+       color:rgb(24, 24, 61) ;
+       border-color: rgb(24, 24, 61);
+
+    }
+    .footer div{
+        display: inline-block;
+    }
+    .footer{
+        height: 400px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(24, 24, 61);
+        color: white;
+    }
+    .footer ul li a{
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+
+    }
+    .footer ul li{
+        list-style-type:none;
+        margin-top: 10px;
+        
+    }
+    .footer-logo{
+        flex: 1;
+        text-align: left;
+        color: white;
+    }
+    .footer-logo ul li{
+        display:inline-block;
+    }
+    .logo.footer-logo{
+        flex: 1;
+        text-align: left;
+    }
+    .Customer{
+        flex: 1;
+        align-content: center;
+    }
+    .Profile{
+        flex: 1;
+        align-content: center;
+    }
+    .Contact{
+        flex: 1;
+        align-content: right;
+    }
+    .element{
+        font-size: 20px;
+    }
+</style>
+<body>
+    <nav >
+        <div class="navbar">
+            <div class="logo">
+                <ul>
+                    <li><img src="images/new_product3.png.webp" width="30px" height="30px" style="border-radius: 50%;"></li>
+                    <li class="color">Logo</li>
+                </ul>
+               
+               
+            </div>
+
+            <div class="list" align="center">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><select list="lis" style="border: none;" class="select">
+                        <option value="category">category</option>
+                        <option value="children">children</option>
+                        <option value="men">men</option>
+                    </select></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li class="color" >Arabic</li>
+                    
+                </ul>
+
+            </div>
+
+            <div class="last">
+                <ul>
+                   
+                    <li><button class="btn">Login</button></li>
+                </ul>
+
+            </div>
+        </div>
+
+       <head>
+        <div class="container">
+        <div class="head">
+            <select list="op" class="select_input">
+                <option value="Egypt">Egypt</option>
+                <option value="Japan">Japan</option>
+                <option value="Canada">Canada</option>
+            </select>
+        </div>
+        <div class="search_input">
+            <input type="search" placeholder="Search what you want" >
+        </div>
+        <div class="search_btn">
+            <button >Search</button>
+        </div>
+        </div>
+       </head>  
+       
+    </nav>
+
+    <main>
+
+        <div class="carts">
+            <div class="cart">
+                <img src="images/new_product3.png.webp" alt="not found" width="250px" height="290px">
+                <h2>Watch product set</h2>
+                <span class="price_before">$500</span>
+                <span class="price_after">$300</span>
+                <button class="cart_btn">Add To Cart</button>
+               
+            </div>
+            <div class="cart">
+                <img src="images/new_product3.png.webp" alt="not found" width="250px" height="290px">
+                <h2>Watch product set</h2>
+                <span class="price_before">$500</span>
+                <span class="price_after">$300</span>
+                <button class="cart_btn">Add To Cart</button>
+               
+            </div>
+
+            <div class="cart">
+                <img src="images/new_product3.png.webp" alt="not found" width="250px" height="290px">
+                <h2>Watch product set</h2>
+                <span class="price_before">$500</span>
+                <span class="price_after">$300</span>
+                <button class="cart_btn">Add To Cart</button>
+               
+            </div>
+
+            <div class="cart">
+                <img src="images/new_product3.png.webp" alt="not found" width="250px" height="290px">
+                <h2>Watch product set</h2>
+                <span class="price_before">$500</span>
+                <span class="price_after">$300</span>
+                <button class="cart_btn">Add To Cart</button>
+               
+            </div>
+           
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-logo">
+                <ul>
+                    <li><img src="images/new_product3.png.webp" width="30px" height="30px" style="border-radius: 50%;"></li>
+                    <li class="color" style="color: white;">Logo</li>
+                </ul>
+                    
+            </div>
+            <div class="Customer">
+                
+                <ul>
+                    <li class="element">Customer Services</li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    
+                </ul>
+            </div>
+            <div class="Profile">
+                
+                <ul>
+                    <li class="element">Profile</li>
+                    <li><a href="#">My account</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Account settings</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="Contact">
+                
+                <ul>
+                    <li class="element">Contact us</li>
+                    <li><a href="tel:3055550123">Phone:305-555-0123</a></li>
+                    <li><a href="mailto:contactstore@gmail.com">contactstore@gmail.com</a></li>
+                    <li><a href="#">Address: 789 Elm St Oriando,Fl 328</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+   
+    
+</body>
+</html>
